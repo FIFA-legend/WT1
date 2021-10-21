@@ -14,10 +14,12 @@ public class ProgrammerBook extends Book{
 
     @Override
     public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
         if (this == o) return true;
-        ProgrammerBook that = (ProgrammerBook) o;
-        return super.equals(o) && level == that.level && language.equals(that.language);
+        if (o == null) return false;
+        if (getClass() != o.getClass()) return false;
+        ProgrammerBook programmerBook = (ProgrammerBook) o;
+        if (!super.equals(programmerBook)) return false;
+        return level == programmerBook.level && language.equals(programmerBook.language);
     }
 
     @Override

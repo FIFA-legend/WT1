@@ -17,11 +17,12 @@ public class Book implements Comparable<Book> {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (o == null || getClass() != o.getClass()) return false;
-        if (this == o) return true;
-        Book book = (Book) o;
-        return price == book.price && isbn.equals(book.isbn) && title.equals(book.title) && author.equals(book.author);
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (object == null) return false;
+        if (getClass() != object.getClass()) return false;
+        Book book = (Book) object;
+        return price == book.price && title.equals(book.title) && author.equals(book.author);
     }
 
     @Override
