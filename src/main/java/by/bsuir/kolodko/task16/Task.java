@@ -16,19 +16,23 @@ public class Task {
         books.add(book2);
         books.add(book1);
 
-        BookComparators comparators = new BookComparators();
+        BookTitleComparator bookTitleComparator = new BookTitleComparator();
+        BookTitleAndAuthorComparator bookTitleAndAuthorComparator = new BookTitleAndAuthorComparator();
+        BookAuthorAndTitleComparator bookAuthorAndTitleComparator = new BookAuthorAndTitleComparator();
+        BookAuthorAndTitleAndPriceComparator bookAuthorAndTitleAndPriceComparator = new BookAuthorAndTitleAndPriceComparator();
+
         System.out.println(books);
 
-        books.sort(comparators.bookTitleComparator);
+        books.sort(bookTitleComparator);
         System.out.println(books);
 
-        books.sort(comparators.bookTitleAndAuthorComparator);
+        books.sort(bookTitleAndAuthorComparator);
         System.out.println(books);
 
-        books.sort(comparators.bookAuthorAndTitleComparator);
+        books.sort(bookAuthorAndTitleComparator);
         System.out.println(books);
 
-        books.sort(comparators.bookAuthorAndTitleAndPriceComparator);
+        books.sort(bookAuthorAndTitleAndPriceComparator);
         System.out.println(books);
     }
 
